@@ -1,0 +1,292 @@
+/*Set default margins to 0 and import font*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Roboto:wght@300&display=swap");
+* {
+    margin: 0px;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+/*Page stylisations and IDs*/
+body {
+    margin: 0px;
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: #140724;
+}
+
+#page {
+    width: 90%;
+    margin: 0px auto;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: white;
+}
+
+a:hover:not(.active) {
+    color: #c39ef3;
+}
+
+.active {
+    color: #E49A2F;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 2%;
+    color: #F0EBEB;
+    letter-spacing: 3px;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    background-color: #3c1a5f;
+    width: 40%;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #E49A2F;
+    padding-bottom: 0.3em;
+    text-align: center;
+}
+
+h3 {
+    padding-top: 2%;
+}
+
+i {
+    float: left;
+    vertical-align: middle;
+    margin-top: 0.1em;
+    margin-right: 0.8em;
+    color: #E49A2F;
+}
+
+/*Content and content classes*/
+section {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    border: none;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: auto;
+    position: relative;
+}
+
+section.contentLeft, section.contentRight, section.frontpage, section.contentMiddle {
+    margin-top: 0%;
+    float: left;
+    width: 25%;
+    margin-left: 3%;
+    border: 2px solid #AC9675;
+}
+
+section.frontpage {
+    margin-left: 20%;
+    margin-top: 15em;
+}
+
+section.workHistory {
+    width: 50%;
+    border-radius: 8px;
+    border: 2px solid #AC9675;
+    margin: auto;
+    margin-top: 37em;
+}
+
+/*Image stylisations and IDs*/
+
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+#selfie_front {
+    float: right;
+    width: 30%;
+    margin: 0%;
+    margin-right: 20%;
+    margin-bottom: 2.6%;
+}
+
+/*Navigation, footer and watermark stylisations*/
+
+nav, footer {
+    font-size: 120%;
+    color: #F7F5EE;
+    text-align: right;
+    top: 0;
+    background-color: #3c1a5f;
+}
+
+nav {
+    width: 100%;
+    background-color: #140724;
+    position: sticky;
+    z-index: +1;
+    min-height: 70px;
+}
+
+#watermark {
+    display: block;
+    padding-top: 1.2em;
+    margin-left: 10%;
+    float: left;
+    color:white;
+}
+
+
+ul {
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+li {
+    padding-top: 0.5em;
+    float: right;
+}
+
+li a {
+    padding: 0.6em;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3c1a5f;
+    border-radius: 8px;
+    margin-right: 1em;
+    width: 6.5em;
+}
+
+.right {
+    margin-right: 2em;
+}
+
+footer {
+    font-size: 120%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+i.icon {
+    float: none;
+    margin: 0% 0% 0.2% 0.3%;
+}
+
+/*Site scaling*/
+@media only screen and (max-width: 1550px) {
+    section.frontpage, #selfie-front {
+        margin-top: 0%;
+        float: left;
+        width: 25%;
+        margin-left: 3%;
+    }
+
+    section.frontpage {
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    h1 {
+        font-size: 130%;
+        margin-left: 30%;
+    }
+
+    section.contentLeft, section.contentRight, section.contentMiddle, section.workHistory {
+        float: none;
+        width: 70%;
+        margin: auto;
+        margin-top: 3%;
+    }
+
+    #selfie_front, section.frontpage {
+        float: none;
+        margin: auto;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 130%;
+        margin-left: 32%;
+        margin-top: 3%;
+    }
+
+    nav, li, li a, ul, #watermark {
+        margin: auto;
+    }
+
+    nav {
+        position: relative;
+        right: 10%;
+        width: 70%;
+        margin-left: 20%;
+    }
+
+    li {
+        margin-left: 1%;
+        float: right;
+    }
+
+    #watermark {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 100%;
+        margin-left: 32%;
+        margin-top: 0%;
+    }
+
+    li, li a, ul, #watermark, .right {
+        margin: auto;
+        float: none;
+    }
+
+    nav {
+        position: relative;
+        right: 10%;
+        width: 70%;
+        margin-left: 20%;
+    }
+
+    #selfie_front, section.frontpage {
+        float: none;
+        margin: auto;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    h1 {
+        font-size: 90%;
+        margin-left: 32%;
+        margin-top: 6%;
+    }
+}
